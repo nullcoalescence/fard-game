@@ -1,4 +1,6 @@
 ﻿using fardgame.cli.Services;
+using fardgame.core.Services;
+using fardgame.core.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -10,9 +12,19 @@ namespace fardgame.cli
         {
             HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
+            // =============================
             // Add services
+            // =============================
+
+            // Singletons
             builder.Services.AddSingleton<GameLoopService>();
 
+            // Scoped
+            builder.Services.AddScoped<ICardBuilderService, CardBuilderService>();
+
+            // =============================
+            // Configure the application lifetime
+            // =============================
             using (IHost host = builder.Build())
             {
                 var lifetime = host.Services.GetRequiredService<IHostApplicationLifetime>();
