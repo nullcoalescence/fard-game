@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "fardgame.cli": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Environment": "Dev"
+      }
+    }
+  }
+}
