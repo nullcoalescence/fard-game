@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="fardgame.cli/fardgame.cli.csproj" />
+  <Project Path="fardgame.models/fardgame.models.csproj" />
+</Solution>
