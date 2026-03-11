@@ -11,4 +11,8 @@
     <ProjectReference Include="..\fardgame.models\fardgame.models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.4" />
+  </ItemGroup>
+
 </Project>
